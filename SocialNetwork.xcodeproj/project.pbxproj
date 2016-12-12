@@ -14,6 +14,11 @@
 		9AA60CE91DFE931E002608E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AA60CE81DFE931E002608E8 /* Assets.xcassets */; };
 		9AA60CEC1DFE931E002608E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AA60CEA1DFE931E002608E8 /* LaunchScreen.storyboard */; };
 		9AA60CF41DFE9383002608E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AA60CF31DFE9383002608E8 /* GoogleService-Info.plist */; };
+		9AA60CFA1DFEC86C002608E8 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA60CF91DFEC86C002608E8 /* CustomView.swift */; };
+		9AA60CFD1DFEC999002608E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA60CFC1DFEC999002608E8 /* Constants.swift */; };
+		9AA60CFF1DFECCA4002608E8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA60CFE1DFECCA4002608E8 /* CustomButton.swift */; };
+		9AA60D011DFECF9F002608E8 /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA60D001DFECF9F002608E8 /* CustomField.swift */; };
+		9AA60D031DFED33D002608E8 /* CustomButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA60D021DFED33D002608E8 /* CustomButton2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		9AA60CEB1DFE931E002608E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AA60CED1DFE931E002608E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AA60CF31DFE9383002608E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9AA60CF91DFEC86C002608E8 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		9AA60CFC1DFEC999002608E8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9AA60CFE1DFECCA4002608E8 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		9AA60D001DFECF9F002608E8 /* CustomField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
+		9AA60D021DFED33D002608E8 /* CustomButton2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
 		BE0CE53ACD036111D283D034 /* Pods_SocialNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE17B6434E8CB0BCCBC946C3 /* Pods-SocialNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialNetwork/Pods-SocialNetwork.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +82,7 @@
 		9AA60CE01DFE931E002608E8 /* SocialNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				9AA60CFB1DFEC97A002608E8 /* Util */,
 				9AA60CF71DFE9C4E002608E8 /* Controller */,
 				9AA60CF61DFE9C48002608E8 /* View */,
 				9AA60CF51DFE9C3F002608E8 /* Model */,
@@ -95,6 +106,10 @@
 		9AA60CF61DFE9C48002608E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9AA60CF91DFEC86C002608E8 /* CustomView.swift */,
+				9AA60CFE1DFECCA4002608E8 /* CustomButton.swift */,
+				9AA60D021DFED33D002608E8 /* CustomButton2.swift */,
+				9AA60D001DFECF9F002608E8 /* CustomField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -113,6 +128,14 @@
 				9AA60CF31DFE9383002608E8 /* GoogleService-Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		9AA60CFB1DFEC97A002608E8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9AA60CFC1DFEC999002608E8 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		E07DEB0CF45B22A67BB459A7 /* Frameworks */ = {
@@ -246,8 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA60CFA1DFEC86C002608E8 /* CustomView.swift in Sources */,
 				9AA60CE41DFE931E002608E8 /* SigninVC.swift in Sources */,
 				9AA60CE21DFE931E002608E8 /* AppDelegate.swift in Sources */,
+				9AA60D031DFED33D002608E8 /* CustomButton2.swift in Sources */,
+				9AA60D011DFECF9F002608E8 /* CustomField.swift in Sources */,
+				9AA60CFD1DFEC999002608E8 /* Constants.swift in Sources */,
+				9AA60CFF1DFECCA4002608E8 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
