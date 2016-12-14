@@ -12,15 +12,15 @@ class CustomField: UITextField {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        layer.borderColor = UIColor(red: shadowGray, green: shadowGray, blue: shadowGray, alpha: 0.6).CGColor
+        layer.borderColor = UIColor(red: shadowGray, green: shadowGray, blue: shadowGray, alpha: 0.6).cgColor
         layer.borderWidth = 1.0
         layer.cornerRadius = 12.0
     }
     
-    override func textRectForBounds(bounds: CGRect) -> CGRect {
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 10, dy: 5)
     }
-    override func editingRectForBounds(bounds: CGRect) -> CGRect {
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 10, dy: 5)
     }
 }
