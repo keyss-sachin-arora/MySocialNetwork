@@ -80,6 +80,9 @@
                                         <state key="normal" title="Sign in">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signinPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tK7-gc-0rA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -123,6 +126,10 @@
                             <constraint firstItem="lS9-CI-EME" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rgP-z5-OMx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="B9Y-MX-YaY" id="0Gy-bw-vjH"/>
+                        <outlet property="txtPassword" destination="IKs-CO-pxA" id="7ZL-IY-4Za"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
