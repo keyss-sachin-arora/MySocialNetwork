@@ -129,11 +129,43 @@
                     <connections>
                         <outlet property="txtEmail" destination="B9Y-MX-YaY" id="0Gy-bw-vjH"/>
                         <outlet property="txtPassword" destination="IKs-CO-pxA" id="7ZL-IY-4Za"/>
+                        <segue destination="yLi-GU-yie" kind="show" identifier="FeedVC" id="jQx-8p-GxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="316" y="60.719640179910051"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="brG-2b-TP9">
+            <objects>
+                <viewController id="yLi-GU-yie" customClass="FeedVC" customModule="SocialNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cCf-os-Dyv"/>
+                        <viewControllerLayoutGuide type="bottom" id="dzD-73-yVB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Ba-Ed-Emr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOT-dF-uIf">
+                                <rect key="frame" x="130" y="269" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="yLi-GU-yie" eventType="touchUpInside" id="fm2-Lf-nIc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sOT-dF-uIf" firstAttribute="centerY" secondItem="3Ba-Ed-Emr" secondAttribute="centerY" id="4UK-fU-cwz"/>
+                            <constraint firstItem="sOT-dF-uIf" firstAttribute="centerX" secondItem="3Ba-Ed-Emr" secondAttribute="centerX" id="5iA-fX-IFp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Orq-h1-qg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063" y="74"/>
         </scene>
     </scenes>
     <resources>

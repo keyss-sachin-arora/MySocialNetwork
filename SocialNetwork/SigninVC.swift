@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 
 class SigninVC: UIViewController {
@@ -19,6 +20,13 @@ class SigninVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            performSegue(withIdentifier: "FeedVC", sender: nil)
+        }
     }
 
     @IBAction func facebookBtnPressed(_ sender: Any) {
@@ -47,6 +55,9 @@ class SigninVC: UIViewController {
             }
             else{
             print("Successfully authenticate with firebase")
+                if let user = user{
+                self.completeSignin(id: user.uid)
+                }
             }
         })
     }
@@ -57,6 +68,9 @@ class SigninVC: UIViewController {
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             if error == nil{
             print("Email user authenticate with firebase.")
+                if let user = user{
+                    self.completeSignin(id: user.uid)
+                }
             }
             else{
             FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -65,11 +79,20 @@ class SigninVC: UIViewController {
                 }
                 else{
                 print("Successfully autheticate with firebase using new email.")
+                    if let user = user{
+                        self.completeSignin(id: user.uid)
+                        }
+                        }
+                    })
                     }
                 })
                 }
-            })
             }
-        }
+    
+    func completeSignin(id : String){
+    let keychainResult = KeychainWrapper.standard.set(id,forKey: KEY_UID)
+        print("Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "FeedVC", sender: nil)
     }
+}
 
